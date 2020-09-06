@@ -1,0 +1,11 @@
+[2020-09-06T23:22:35.794] [ERROR] cheese - Error: test error log
+    at actionIndex (/Users/yuwenjie/Desktop/bff-demo/controllers/IndexController.js:9:15)
+    at dispatch (/Users/yuwenjie/Desktop/bff-demo/node_modules/koa-compose/index.js:42:32)
+    at /Users/yuwenjie/Desktop/bff-demo/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/yuwenjie/Desktop/bff-demo/node_modules/koa-compose/index.js:42:32)
+    at /Users/yuwenjie/Desktop/bff-demo/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/yuwenjie/Desktop/bff-demo/node_modules/@koa/router/lib/router.js:377:31)
+    at dispatch (/Users/yuwenjie/Desktop/bff-demo/node_modules/koa-compose/index.js:42:32)
+    at /Users/yuwenjie/Desktop/bff-demo/middlewares/errorHandler.js:14:19
+    at dispatch (/Users/yuwenjie/Desktop/bff-demo/node_modules/koa-compose/index.js:42:32)
+    at /Users/yuwenjie/Desktop/bff-demo/middlewares/errorHandler.js:6:23

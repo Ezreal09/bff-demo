@@ -6,6 +6,7 @@ class IndexController extends Controller {
         super()
     }
     async actionIndex(ctx){
+        throw new Error('test error log')
         ctx.body = await ctx.render('index');
     }
 }

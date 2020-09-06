@@ -9,6 +9,15 @@ const errorHander = require('./middlewares/errorHandler');
 
 const app = new Koa();
 
+//错误日志配置
+const log4js = require("log4js");
+log4js.configure({
+  appenders: { globalError: { type: "file", filename: "./logs/error.log" } },
+  categories: { default: { appenders: ["globalError"], level: "error" } }
+});
+const logger = log4js.getLogger("cheese");
+
+
 //swig 模版
 app.context.render = co.wrap(render({
     root: config.viewsDir,
@@ -20,7 +29,7 @@ app.context.render = co.wrap(render({
 app.use(staticServe(config.staticDir));
 
 //错误处理
-errorHander.error(app);
+errorHander.error(app, logger);
 //初始化路由
 initController(app);
 

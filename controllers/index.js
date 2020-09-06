@@ -5,7 +5,6 @@ const ApiController = require('./ApiController')
 const indexController = new IndexController();
 const apiController = new ApiController();
 
-
 const router = new Router();
 
 function initController(app) {
