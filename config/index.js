@@ -1,8 +1,8 @@
-const path = require('path');
+import path from 'path';
 
 let config = {
     viewsDir: path.join(__dirname, '../', 'views'),
-    staticDir:path.join(__dirname, '../', 'assets')
+    staticDir:path.join(__dirname, '../', 'assets')//静态资源目录配置
 };
 
 //开发环境
@@ -23,4 +23,4 @@ if (process.env.NODE_ENV === 'production') {
     config = { ...config, ...proConfig };
 }
 
-module.exports = config;
+export default config;

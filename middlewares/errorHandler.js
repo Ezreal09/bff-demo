@@ -19,4 +19,4 @@ class Errorhander {
     }
 }
 
-module.exports = Errorhander
+export default Errorhander;

@@ -1,4 +1,5 @@
-const Controller = require('./Controller');
+
+import Controller from './Controller'
 
 
 class IndexController extends Controller {
@@ -10,4 +11,5 @@ class IndexController extends Controller {
         ctx.body = await ctx.render('index');
     }
 }
-module.exports = IndexController;
+
+export default IndexController

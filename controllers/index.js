@@ -1,6 +1,6 @@
-const Router = require('@koa/router');
-const IndexController = require('./IndexController');
-const ApiController = require('./ApiController')
+import Router from '@koa/router';
+import IndexController from './IndexController';
+import ApiController from './ApiController';
 
 const indexController = new IndexController();
 const apiController = new ApiController();
@@ -16,4 +16,4 @@ function initController(app) {
         .use(router.allowedMethods());
 }
 
-module.exports = initController;
+export default initController
