@@ -1,17 +1,13 @@
-import Controller from './Controller'
+import Controller from './Controller';
+import BooksModel from '../models/BooksModel';
 
 class ApiController extends Controller {
     constructor() {
         super()
     }
-    actionDataList(ctx) {
-        ctx.body = [{
-            id: 1,
-            data: 'A'
-        }, {
-            id: 2,
-            data: 'b'
-        }]
+    async actionBooksList(ctx) {
+        const booksModel = new BooksModel();
+        ctx.body = await booksModel.getBooksList()
     }
 }
 
